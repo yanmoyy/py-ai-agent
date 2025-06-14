@@ -1,5 +1,6 @@
 from functions.get_file_content import get_file_content
 from functions.get_files_info import get_files_info
+from functions.run_python_file import run_python_file
 from functions.write_file import write_file
 
 
@@ -64,8 +65,30 @@ def test_write_file():
     print("")
 
 
+def test_run_python_file():
+    result = run_python_file("calculator", "main.py")
+    print("Result for running 'main.py':")
+    print(result)
+    print("")
+
+    result = run_python_file("calculator", "tests.py")
+    print("Result for running 'tests.py':")
+    print(result)
+    print("")
+
+    result = run_python_file("calculator", "../main.py")
+    print("Result for running '../main.py':")
+    print(result)
+    print("")
+
+    result = run_python_file("calculator", "nonexistent.py")
+    print("Result for running 'nonexistent.py':")
+    print(result)
+    print("")
+
+
 def test():
-    test_write_file()
+    test_run_python_file()
 
 
 if __name__ == "__main__":
