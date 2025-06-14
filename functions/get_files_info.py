@@ -37,4 +37,4 @@ def get_files_info(working_directory, directory=None):
         str_file_info = "\n".join(["- " + str(info) for info in file_info])
         return str_file_info
     except Exception as e:
-        return f"Error listing files: {e}"
+        return f"Error: listing files: {e}"

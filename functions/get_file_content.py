@@ -23,4 +23,4 @@ def get_file_content(working_directory, file_path):
                 content += end_message
             return content
     except Exception as e:
-        return f'Error reading "{file_path}": {e}'
+        return f'Error: reading "{file_path}": {e}'
